@@ -1,0 +1,10 @@
+{
+    "name": "ghost-bot",
+    "version": "1.0.0",
+    "description": "a friendly Ghost",
+    "main": "bot.js",
+    "author": "Chris Magnacca",
+    "dependencies": {
+        
+    }
+}
