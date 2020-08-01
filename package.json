@@ -1,10 +1,27 @@
 {
-    "name": "ghost-bot",
-    "version": "1.0.0",
-    "description": "a friendly Ghost",
-    "main": "bot.js",
-    "author": "Chris Magnacca",
-    "dependencies": {
-        
-    }
+  "name": "ghost-bot",
+  "version": "1.0.0",
+  "description": "a friendly Ghost",
+  "main": "index.js",
+  "author": "Chris Magnacca",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "js-beautify": "^1.11.0",
+    "util": "^0.12.3",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrismagnacca/ghost-bot.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrismagnacca/ghost-bot/issues"
+  },
+  "homepage": "https://github.com/chrismagnacca/ghost-bot#readme"
 }
