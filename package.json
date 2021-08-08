@@ -9,7 +9,8 @@
     "dotenv": "^8.2.0",
     "js-beautify": "^1.11.0",
     "util": "^0.12.3",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "color-string": ">=1.5.5"
   },
   "devDependencies": {},
   "scripts": {
