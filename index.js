@@ -1,12 +1,13 @@
 require('dotenv').config();
 
-const Discord = require('discord.js');
-const { Client, MessageEmbed, ReactionManager } = require('discord.js');
+
+const { Client, Intents, MessageEmbed, ReactionManager } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+
 const Winston = require('winston');
-const Util = require('util');
-const { sign } = require('crypto');
 
 const TOKEN = process.env.TOKEN;
+
 const LOGGER = Winston.createLogger({
     level: 'info',
     format: Winston.format.json(),
@@ -22,16 +23,14 @@ const pvpEmoji = '🤺';
 const signupEmoji = '✅';
 const cancelSignupEmoji = '🔴';
 
-const bot = new Discord.Client();
+client.login(TOKEN);
 
-bot.login(TOKEN);
-
-bot.on('ready', function (evt) {
+client.on('ready', function (evt) {
     LOGGER.info('Connected!');
-    LOGGER.info(`Logged in as: ${bot.user.tag}`);
+    LOGGER.info(`Logged in as: ${client.user.tag}`);
 });
 
-bot.on('message', message => {
+client.on('messageCreate', message => {
     if(message.content.substring(0,1) == '!') {
         var arguments = message.content.substring(1).split(' ');
         var command = arguments[0];
@@ -42,9 +41,8 @@ bot.on('message', message => {
     }
 });
 
-bot.on('messageReactionAdd', async(reaction, user) => {
+client.on('messageReactionAdd', async(reaction, user) => {
     if(user.bot == false) {
-        
         handleReaction(reaction, user);
     }
 });
