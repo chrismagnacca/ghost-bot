@@ -7,7 +7,7 @@ A general purpose Discord bot for managing various Destiny-related tasks.
 ---
 
 ## Built With & On
-* [Node.js](https://nodejs.org/en/download/) v16.6.1
+* [Node.js](https://nodejs.org/en/download/current) v16.6.1
 * [Discord.js](https://discord.js.org/#/) v13.0.1
 
 <br />
